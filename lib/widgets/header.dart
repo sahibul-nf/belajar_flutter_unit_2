@@ -38,10 +38,25 @@ class Header extends StatelessWidget {
             height: 40,
             width: 40,
             decoration: BoxDecoration(
-              color: const Color(0xffF7F6F9),
+              color: Colors.grey.shade100,
               borderRadius: BorderRadius.circular(40),
             ),
-            child: const Icon(Icons.notifications_outlined),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                const Icon(Icons.notifications_outlined),
+                Align(
+                  alignment: const Alignment(0.4, -0.4),
+                  child: Container(
+                    height: 8,
+                    width: 8,
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
